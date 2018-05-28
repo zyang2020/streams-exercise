@@ -2,8 +2,6 @@
 
 class StreamProcessor(object):
     """
-    Your first exercise!
-    
     Write a stream processor class that does the following:
         1. You initialize an instance with a stream of digits
           (AKA: file-like object, instance of StringIO), and
@@ -22,16 +20,26 @@ class StreamProcessor(object):
             3. Once this number reaches 200 or more, the method returns how
                many two digit numbers it had to add together to reach its
                total.
-               
             4. If `process` reaches the end of the stream BEFORE it has
                reached a sum of 200, then it will return how many two
                digit numbers it found before reaching the end of the
                stream.
-               
             5. The method will add AT MOST 10 of these two digit numbers
                together: if it reaches the 10th two digit number and the
                sum has not yet reached 200, then the method will stop and
                return 10.
+
+    For example, given a stream yielding "234761640930110349378289194", the
+    process method will:
+
+            1. Read two digits at a time from the stream: "23", "47", "61", etc.
+            2. Convert these digits into a number: 23, 47, 61, etc., and  make a
+               running total of these numbers: 23 + 47 equals 70. 70 + 61 equals
+               131, etc.
+            3. For this particular stream, the running total will exceed 200 after
+               5 such additions: the `process` method should return 5.
+
+    You can see the `tests.py` file for more examples of expected outcomes.
     """
 
     def __init__(self, stream):
@@ -47,6 +55,12 @@ class StreamProcessor(object):
         count = 0
         total = 0
 
-        # WRITE CODE HERE:
+        # TODO: WRITE CODE HERE:
+
+        # Just some example syntax, you can read two digits from the head of the
+        # stream using the following code:
+        #
+        # digits = self._stream.read(2)
+
 
         return count
