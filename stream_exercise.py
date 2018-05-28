@@ -52,8 +52,9 @@ class StreamProcessor(object):
         :return: int
         """
 
-        count = 0
-        total = 0
+        count = 0  # How many two-digit numbers the `process` method has added
+                   # together.
+        total = 0  # The running total of sums.
 
         # TODO: WRITE CODE HERE:
 
